@@ -15,7 +15,7 @@ spec:
   # Where to deploy
   destination:
     server: https://kubernetes.default.svc
-    namespace: argocd
+    namespace: ""
 
   # Auto sync when git changes
   syncPolicy:
