@@ -11,6 +11,8 @@ spec:
     repoURL: https://github.com/sourav-m619/cloudstore-gitops.git
     targetRevision: HEAD
     path: Kubernetes/
+    directory:
+     recurse: true 
 
   # Where to deploy
   destination:
