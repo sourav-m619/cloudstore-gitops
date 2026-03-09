@@ -1,0 +1,26 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: cloudstore
+  namespace: argocd
+spec:
+  project: default
+
+  # Where to get K8s manifests
+  source:
+    repoURL: https://github.com/sourav-m619/cloudstore-gitops.git
+    targetRevision: HEAD
+    path: kubernetes/
+
+  # Where to deploy
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: argocd
+
+  # Auto sync when git changes
+  syncPolicy:
+    automated:
+      prune: true      # delete removed resources
+      selfHeal: true   # revert manual changes
+    syncOptions:
+      - CreateNamespace=true
