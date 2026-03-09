@@ -10,7 +10,7 @@ spec:
   source:
     repoURL: https://github.com/sourav-m619/cloudstore-gitops.git
     targetRevision: HEAD
-    path: kubernetes/
+    path: kuberenetes/
 
   # Where to deploy
   destination:
