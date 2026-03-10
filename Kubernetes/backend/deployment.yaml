@@ -49,6 +49,8 @@ spec:
               value: "cloudstore-db"
             - name: DB_USER
               value: "appdb"
+            - name: DB_SSL
+              value: "false"
   # Password from Secret Manager via ESO 
             - name: DB_PASSWORD
               valueFrom:
