@@ -1,0 +1,30 @@
+apiVersion: networking.istio.io/v1beta1
+kind: VirtualService
+metadata:
+  name: cloudstore-vs
+  namespace: istio-system
+spec:
+  hosts:
+    - "*"
+  gateways:
+    - cloudstore-gateway
+  http:
+    # API requests go to backend
+    - match:
+        - uri:
+            prefix: /api
+      route:
+        - destination:
+            host: backend-svc.backend.svc.cluster.local
+            port:
+              number: 80
+
+    # All other requests go to frontend
+    - match:
+        - uri:
+            prefix: /
+      route:
+        - destination:
+            host: frontend-svc.frontend.svc.cluster.local
+            port:
+              number: 80
