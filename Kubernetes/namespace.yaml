@@ -4,6 +4,7 @@ metadata:
   name: backend
   labels: 
     app: cloudstore
+    istio-injection: enabled
 ---
 apiVersion: v1
 kind: Namespace
@@ -11,4 +12,5 @@ metadata:
   name: frontend
   labels:
     app: cloudstore
+    istio-injection: enabled
   
