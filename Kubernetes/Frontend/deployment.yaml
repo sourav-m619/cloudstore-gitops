@@ -36,6 +36,7 @@ spec:
               drop:
                 - ALL
 
+
           env:
             - name: REACT_APP_API_URL
               value: "http://backend-svc.backend.svc.cluster.local"
