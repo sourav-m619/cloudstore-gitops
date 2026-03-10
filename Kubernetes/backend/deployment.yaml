@@ -90,6 +90,7 @@ spec:
           args:
             - "--structured-logs"
             - "--port=5432"
+            - "--private-ip"
             - "cloudstore-489011:us-central1:postgresql-cs"
 
           securityContext:
