@@ -52,4 +52,4 @@ data:
             - batch
           exporters:
             - prometheus
-            - logging
+            - debug
