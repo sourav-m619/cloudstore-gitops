@@ -33,13 +33,23 @@ data:
       logging:
         verbosity: basic
 
-    service:
+     service:
       pipelines:
         traces:
-          receivers: [otlp]
-          processors: [memory_limiter, batch]
-          exporters: [otlp/jaeger, logging]
+          receivers:
+            - otlp
+          processors:
+            - memory_limiter
+            - batch
+          exporters:
+            - otlp/jaeger
+            - logging
         metrics:
-          receivers: [otlp]
-          processors: [memory_limiter, batch]
-          exporters: [prometheus, logging
+          receivers:
+            - otlp
+          processors:
+            - memory_limiter
+            - batch
+          exporters:
+            - prometheus
+            - logging
