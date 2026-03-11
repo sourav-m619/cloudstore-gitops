@@ -9,9 +9,9 @@ data:
       otlp:
         protocols:
           grpc:
-            endpoint: 0.0.0.0:4317
+            endpoint: "0.0.0.0:4317"
           http:
-            endpoint: 0.0.0.0:4318
+            endpoint: "0.0.0.0:4318"
 
     processors:
       batch:
@@ -24,16 +24,16 @@ data:
 
     exporters:
       otlp/jaeger:
-        endpoint: jaeger-collector.istio-system.svc.cluster.local:4317
+        endpoint: "jaeger-collector.istio-system.svc.cluster.local:4317"
         tls:
           insecure: true
       prometheus:
-        endpoint: 0.0.0.0:8889
+        endpoint: "0.0.0.0:8889"
         namespace: cloudstore
       logging:
         verbosity: basic
 
-     service:
+    service:
       pipelines:
         traces:
           receivers:
