@@ -30,7 +30,7 @@ data:
       prometheus:
         endpoint: "0.0.0.0:8889"
         namespace: cloudstore
-      logging:
+      debug:
         verbosity: basic
 
     service:
