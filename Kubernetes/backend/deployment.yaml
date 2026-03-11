@@ -24,7 +24,7 @@ spec:
 
       containers:
         - name: backend
-          image: us-central1-docker.pkg.dev/cloudstore-489011/cloudstore-image-repo/backend:5ce91b735a1629d8e4bb2c0621d01ca2907f340e
+          image: us-central1-docker.pkg.dev/cloudstore-489011/cloudstore-image-repo/backend:0e684140bc3a13a2b87f9e53e397f93fc62049ef
           imagePullPolicy: Always
           ports:
             - containerPort: 8080
