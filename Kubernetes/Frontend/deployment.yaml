@@ -24,7 +24,7 @@ spec:
 
       containers:
         - name: frontend
-          image: us-central1-docker.pkg.dev/cloudstore-489011/cloudstore-image-repo/frontend:latest
+          image: us-central1-docker.pkg.dev/cloudstore-489011/cloudstore-image-repo/frontend:7ded13bb48b79703862a243b22b6794619c4480a
           imagePullPolicy: Always
           ports:
             - containerPort: 3000
