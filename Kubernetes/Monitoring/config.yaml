@@ -43,7 +43,7 @@ data:
             - batch
           exporters:
             - otlp/jaeger
-            - logging
+            - debug
         metrics:
           receivers:
             - otlp
