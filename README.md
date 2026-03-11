@@ -135,5 +135,5 @@ Install ArgoCD on the new cluster.
 Apply the Root Application:
 
 Bash
-kubectl apply -f argocd/app-of-apps.yaml
+kubectl apply -f argo-cd/.yaml
 ArgoCD will recursively apply the platform and apps definitions, completely restoring the cluster state from this repository.
